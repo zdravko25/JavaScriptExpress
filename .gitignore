@@ -1,0 +1,17 @@
+./node_modules
+./dist
+./build
+./coverage
+./logs
+./temp
+./cache
+./backup
+./backup
+myexpressapp/node_modules
+myexpressapp/dist
+myexpressapp/build
+myexpressapp/coverage
+myexpressapp/logs
+myexpressapp/temp
+myexpressapp/cache
+myexpressapp/backup
