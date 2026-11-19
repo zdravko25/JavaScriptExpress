@@ -4,6 +4,9 @@ const express = require("express");
 // Create an instance of an Express application
 const app = new express();
 
+// Parse JSON bodies so POST handlers can read req.body
+app.use(express.json());
+
 // Define the port number
 const port = 8080;
 
@@ -22,6 +25,14 @@ app.get("/contact", (req, res) => {
 
 app.get("/services", (req, res) => {
   return res.send("Products page");
+});
+
+app.post("/products", (req, res) => {
+  console.log(req.body);
+  return res.status(201).json({
+    message: "Product created",
+    product: req.body,
+  });
 });
 
 // Start the server and listen on the specified port
